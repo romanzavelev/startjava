@@ -17,13 +17,13 @@ public class ConditionalStatement {
         } else {
             System.out.println("high");
         }
-        char firstLetter = 'M';
-        if (firstLetter == 'M') {
-            System.out.println("first letter = M");
-        } else if (firstLetter == 'I') {
-            System.out.println("first letter = I");
+        char firstLetterName = 'M';
+        if (firstLetterName == 'M') {
+            System.out.println("first letter name = M");
+        } else if (firstLetterName == 'I') {
+            System.out.println("first letter name= I");
         } else {
-            System.out.println("first letter not I and first letter not M");
+            System.out.println("first letter name not I and first letter name not M");
         }
     }
 }

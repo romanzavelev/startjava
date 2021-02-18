@@ -7,6 +7,7 @@ public class Variable {
         double biosVersion = 1.23;
         char cpuModel = 'p';
         boolean isMacOs = false;
+        
         System.out.println("cpuModel = " + cpuModel);
         System.out.println("biosVersion = " + biosVersion);
         System.out.println("screenSize = " + screenSize);
