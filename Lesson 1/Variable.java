@@ -6,13 +6,13 @@ public class Variable {
         float screenSize = 24;
         double biosVersion = 1.23;
         char cpuModel = 'p';
-        boolean osIsMac = false;
+        boolean isMacOs = false;
         System.out.println("cpuModel = " + cpuModel);
         System.out.println("biosVersion = " + biosVersion);
         System.out.println("screenSize = " + screenSize);
         System.out.println("hddSize = " + hddSize);
         System.out.println("ramSize = " + ramSize);
         System.out.println("numberOfCores = " + numberOfCores);
-        System.out.println("osIsMac = " + osIsMac);
+        System.out.println("isMacOs = " + isMacOs);
     }
 }
