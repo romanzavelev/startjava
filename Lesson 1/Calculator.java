@@ -3,21 +3,21 @@ public class Calculator {
         int x = 5;
         int y = 6;
         char sign = '+';
-        
+
         if (sign == '+') {
-            System.out.println(x+y);
+            System.out.println(x + y);
         } else if (sign == '*') {
-            System.out.println(x*y);
+            System.out.println(x * y);
         } else if (sign == '/') {
-            System.out.println(x/y);
+            System.out.println(x / y);
         } else if (sign == '^') {
-            int sum = x;
+            int result = x;
             for (int i = 2; i <= y; i++) {
-                sum = sum * x;
+                result *= x;
             }
-            System.out.println(sum);
+            System.out.println(result);
         } else if (sign == '%') {
-            System.out.println(x%y);
+            System.out.println(x % y);
         }  
     }
 }
