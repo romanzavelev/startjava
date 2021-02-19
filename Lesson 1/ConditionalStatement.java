@@ -4,6 +4,7 @@ public class ConditionalStatement {
         if (age > 20) {
             System.out.println("adult");
         }
+
         boolean genderMale = true;
         if (genderMale) {
             System.out.println("man");
@@ -11,12 +12,14 @@ public class ConditionalStatement {
         if (!genderMale) {
             System.out.println("woman");
         }
+
         double height = 1.60;
         if (height < 1.80) {
             System.out.println("low");
         } else {
             System.out.println("high");
         }
+        
         char firstLetterName = 'M';
         if (firstLetterName == 'M') {
             System.out.println("first letter name = M");
