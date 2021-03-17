@@ -1,5 +1,5 @@
 public class Calculator {   
-    public math(int x, char sign, int y) {
+    public int math(int x, char sign, int y) {
         switch (sign) {
             case ('+'):
             return (x + y);
