@@ -13,10 +13,8 @@ public class Calculator {
                 result *= x;
             }
             return result;
-            case '%':
-            return (x % y);
             default:
-            return "Введен не верный математический знак!";
+            return (x % y);
         } 
     }
 }
