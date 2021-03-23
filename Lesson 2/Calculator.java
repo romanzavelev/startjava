@@ -10,11 +10,14 @@ public class Calculator {
             case '^':
                 int result = x;
                 for (int i = 2; i <= y; i++) {
-                result *= x;
+                    result *= x;
                 }
                 return result;
-            default:
+            case '%':
                 return (x % y);
+            default:
+                System.out.println("Данная операция не поддерживается");
+                return 0;
         } 
     }
 }
