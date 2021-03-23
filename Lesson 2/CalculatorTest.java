@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class CalculatorTest {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -12,9 +13,9 @@ public class CalculatorTest {
             System.out.print("Введите второе число: ");
             int y = scan.nextInt();
             scan.nextLine();
-            System.out.println(Calculator.math(x,sign,y));
+            System.out.println(Calculator.calculate(x,sign,y));
             answer = "";
-            while (! answer.equals("yes") && ! answer.equals("no")) {
+            while (!answer.equals("yes") && !answer.equals("no")) {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 answer = scan.nextLine();
             }
