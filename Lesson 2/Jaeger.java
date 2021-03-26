@@ -14,7 +14,7 @@ public class Jaeger {
         status = "Destroyed";
         appearedIn = "Pacific Rim";
     }
-      public Jaeger(String modelName, String mark, int strength) {
+    public Jaeger(String modelName, String mark, int strength) {
         this.modelName = modelName;
         this.mark = mark;
         this.strength = strength;
@@ -85,7 +85,6 @@ public class Jaeger {
     public int getArmor() {
         return armor;
     }
-
 
     public boolean drift() {
         System.out.println("Вы вошли в дрифт");

@@ -17,5 +17,11 @@ public class JaegerTest {
         jaeger2.drift();
         System.out.println(jaeger2.getMark());
         System.out.println(jaeger2.getStrength());
+
+        Jaeger jaeger3 = new Jaeger("Striker Eureka","Mark-5", 10);
+        jaeger3.move();
+        jaeger3.drift();
+        System.out.println(jaeger3.getMark());
+        System.out.println(jaeger3.getStrength());
     }
 }
