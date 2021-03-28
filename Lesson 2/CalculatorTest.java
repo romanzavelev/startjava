@@ -4,8 +4,8 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Calculator calc = new Calculator();
-        String answer = "yes";
-        while (answer.equals("yes")) {
+        String answer;
+        do {
             System.out.print("Введите первое число: ");
             int x = scan.nextInt();
             System.out.print("Введите знак математической операции: ");
@@ -18,6 +18,6 @@ public class CalculatorTest {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 answer = scan.nextLine();
             } while (!answer.equals("yes") && !answer.equals("no"));
-        }
+        } while (answer.equals("yes")) 
     }
 }
