@@ -13,7 +13,7 @@ public class GuessNumberTest {
             name = scan.nextLine();
             Player player2 = new Player(name);
             GuessNumber game = new GuessNumber(player1, player2);
-            game.StartGame();
+            game.start();
             do {
                 System.out.println("Хотите продолжить игру? [yes/no]:");
                 answer = scan.nextLine();
