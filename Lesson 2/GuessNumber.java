@@ -2,9 +2,9 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class GuessNumber {
-private Player player1;
-private Player player2;
-private int randomNumber;
+    private Player player1;
+    private Player player2;
+    private int randomNumber;
 
     public GuessNumber(Player player1, Player player2) {
         this.player1 = player1;
@@ -28,6 +28,7 @@ private int randomNumber;
                 System.out.println(player1.getName());
                 break;
             }
+            
             System.out.println(player2.getName());
             System.out.println("Введите число: ");
             player2.setNumber(scan.nextInt());
