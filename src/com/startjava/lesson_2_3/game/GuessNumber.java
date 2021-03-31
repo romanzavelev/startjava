@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.game;
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -15,7 +17,7 @@ public class GuessNumber {
         Random random = new Random();
         randomNumber = random.nextInt(101);
         Scanner scan = new Scanner(System.in);
-        while(enteredNumber != randomNumber) { 
+        while(true) { 
             System.out.println(player1.getName());
             System.out.println("Введите число: ");
             player1.setNumber(scan.nextInt());

@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.calculator;
+
 import java.util.Scanner;
 
 public class CalculatorTest {
@@ -18,6 +20,6 @@ public class CalculatorTest {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 answer = scan.nextLine();
             } while (!answer.equals("yes") && !answer.equals("no"));
-        } while (answer.equals("yes")) 
+        } while (answer.equals("yes"));
     }
 }
