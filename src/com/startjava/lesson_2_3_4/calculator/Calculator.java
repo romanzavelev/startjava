@@ -1,25 +1,22 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {   
-    public static int calculate(int x, char sign, int y) {
-        switch (sign) {
-            case '+':
-                return x + y;
-            case '*':
-                return (x * y);
-            case '/':
-                return (x / y);
-            case '^':
-                int result = x;
-                for (int i = 2; i <= y; i++) {
-                    result *= x;
-                }
-                return result;
-            case '%':
-                return (x % y);
+    public static int calculate(String mathString) {
+        String[] arrayMathString = mathString.split(" ");
+        switch (arrayMathString[1]) {
+            case "+":
+                return Integer.parseInt(arrayMathString[0]) + Integer.parseInt(arrayMathString[2]);
+            case "*":
+                return Integer.parseInt(arrayMathString[0]) * Integer.parseInt(arrayMathString[2]);
+            case "/":
+                return Integer.parseInt(arrayMathString[0]) / Integer.parseInt(arrayMathString[2]);
+            case "^":
+                return (int) Math.pow(Integer.parseInt(arrayMathString[0]), Integer.parseInt(arrayMathString[2]));
+            case "%":
+                return Integer.parseInt(arrayMathString[0]) % Integer.parseInt(arrayMathString[2]);
             default:
                 System.out.println("Данная операция не поддерживается");
                 return 0;
-        } 
+        }
     }
 }
