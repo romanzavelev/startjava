@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class CalculatorTest {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-//        Calculator calc = new Calculator();
+       Calculator calc = new Calculator();
         String answer;
         do {
             System.out.print("Введите математическое выражение: ");
             String mathString = scan.nextLine();
-            System.out.println(Calculator.calculate(mathString));
+            System.out.println(calc.calculate(mathString));
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 answer = scan.nextLine();

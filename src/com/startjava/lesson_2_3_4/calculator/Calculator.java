@@ -1,7 +1,7 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {   
-    public static int calculate(String mathString) {
+    public int calculate(String mathString) {
         String[] arrayMathString = mathString.split(" ");
         switch (arrayMathString[1]) {
             case "+":
