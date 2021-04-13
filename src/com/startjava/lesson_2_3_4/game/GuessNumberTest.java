@@ -8,6 +8,7 @@ public class GuessNumberTest {
         String answer;
         do {
             System.out.println("New game");
+            System.out.println("У каждого игрока 10 попыток.");
             System.out.print("Введите имя первого игрока: ");
             String name = scan.nextLine();
             Player player1 = new Player(name);
