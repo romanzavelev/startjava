@@ -4,8 +4,8 @@ public class Player {
      
     private String name;
     private int number;
-    private int[] numbers;
-    private int tryNumber;
+    private int[] numbers = new int[10];
+    private int tryNumber = 1;
 
     public Player(String name) {
         this.name = name;
@@ -17,7 +17,7 @@ public class Player {
 
     public void setNumber(int number) {
         this.number = number;
-        numbers[tryNumber] = number;
+        numbers[tryNumber - 1] = number;
         tryNumber++;
     }
 
