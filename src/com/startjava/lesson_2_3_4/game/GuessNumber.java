@@ -64,5 +64,7 @@ public class GuessNumber {
         System.out.println(Arrays.toString(arrayTryPlayer1));
         int[] arrayTryPlayer2 = Arrays.copyOf(player2.getNumbers(), player2.getTryNumber());
         System.out.println(Arrays.toString(arrayTryPlayer2));
+        player1.resetArray();
+        player2.resetArray();
     }
 }

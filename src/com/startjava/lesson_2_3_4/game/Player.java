@@ -1,11 +1,14 @@
 package com.startjava.lesson_2_3_4.game;
 
+import java.sql.Array;
+import java.util.Arrays;
+
 public class Player {
      
     private String name;
     private int number;
     private int[] numbers = new int[10];
-    private int tryNumber = 1;
+    private int tryNumber = 0;
 
     public Player(String name) {
         this.name = name;
@@ -16,9 +19,9 @@ public class Player {
     }
 
     public void setNumber(int number) {
+        tryNumber++;
         this.number = number;
         numbers[tryNumber - 1] = number;
-        tryNumber++;
     }
 
     public int getNumber() {
@@ -35,5 +38,9 @@ public class Player {
 
     public int[] getNumbers() {
         return numbers;
+    }
+
+    public void resetArray() {
+        Arrays.fill(numbers, 0, tryNumber - 1, 0);
     }
 }
