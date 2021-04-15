@@ -40,7 +40,8 @@ public class Player {
         return numbers;
     }
 
-    public void resetArray() {
-        Arrays.fill(numbers, 0, tryNumber - 1, 0);
+    public void resetValues() {
+        Arrays.fill(numbers, 0, tryNumber, 0);
+        tryNumber = 0;
     }
 }

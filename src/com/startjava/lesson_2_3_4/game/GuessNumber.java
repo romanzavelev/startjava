@@ -27,8 +27,8 @@ public class GuessNumber {
             } else if (player1.getNumber() < randomNumber) {
                 System.out.println("Введенное вами число меньше того, что загадал компьютер");
             } else {
-                System.out.println("Победа!!! Угадал игрок:");
-                System.out.println(player1.getName());
+                System.out.println("Игрок " + player1.getName() + " угадал число " + player1.getNumber() +
+                        " с " + player1.getTryNumber() + " попытки");
                 endGame();
                 break;
             }
@@ -47,12 +47,12 @@ public class GuessNumber {
                 break;
             }
             if (player1.getTryNumber() == 10) {
-                System.out.println("У игрока " + player1.getName() + "закончились попытки");
+                System.out.println("У игрока " + player1.getName() + " закончились попытки");
                 endGame();
                 break;
             }
             if (player2.getTryNumber() == 10) {
-                System.out.println("У игрока " + player2.getName() + "закончились попытки");
+                System.out.println("У игрока " + player2.getName() + " закончились попытки");
                 endGame();
                 break;
             }
@@ -64,7 +64,7 @@ public class GuessNumber {
         System.out.println(Arrays.toString(arrayTryPlayer1));
         int[] arrayTryPlayer2 = Arrays.copyOf(player2.getNumbers(), player2.getTryNumber());
         System.out.println(Arrays.toString(arrayTryPlayer2));
-        player1.resetArray();
-        player2.resetArray();
+        player1.resetValues();
+        player2.resetValues();
     }
 }
