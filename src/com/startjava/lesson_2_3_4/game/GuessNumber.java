@@ -18,7 +18,7 @@ public class GuessNumber {
         Random random = new Random();
         randomNumber = random.nextInt(101);
         Scanner scan = new Scanner(System.in);
-        while(true) {
+        while (true) {
             System.out.println(player1.getName());
             System.out.println("Введите число: ");
             player1.setNumber(scan.nextInt());
@@ -32,7 +32,7 @@ public class GuessNumber {
                 endGame();
                 break;
             }
-            
+
             System.out.println(player2.getName());
             System.out.println("Введите число: ");
             player2.setNumber(scan.nextInt());
@@ -56,7 +56,7 @@ public class GuessNumber {
                 endGame();
                 break;
             }
-        } 
+        }
     }
 
     private void endGame() {
