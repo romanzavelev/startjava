@@ -4,7 +4,7 @@ import java.sql.Array;
 import java.util.Arrays;
 
 public class Player {
-     
+
     private String name;
     private int number;
     private int[] numbers = new int[10];
