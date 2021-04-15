@@ -29,6 +29,7 @@ public class GuessNumber {
             } else {
                 System.out.println("Победа!!! Угадал игрок:");
                 System.out.println(player1.getName());
+                endGame();
                 break;
             }
             
@@ -42,22 +43,26 @@ public class GuessNumber {
             } else {
                 System.out.println("Игрок " + player2.getName() + " угадал число " + player2.getNumber() +
                         " с " + player2.getTryNumber() + " попытки");
+                endGame();
                 break;
             }
             if (player1.getTryNumber() == 10) {
                 System.out.println("У игрока " + player1.getName() + "закончились попытки");
+                endGame();
+                break;
             }
             if (player2.getTryNumber() == 10) {
                 System.out.println("У игрока " + player2.getName() + "закончились попытки");
+                endGame();
+                break;
             }
         } 
     }
 
-    static void endGame(Player player1, Player player2) {
+    private void endGame() {
         int[] arrayTryPlayer1 = Arrays.copyOf(player1.getNumbers(), player1.getTryNumber());
         System.out.println(Arrays.toString(arrayTryPlayer1));
         int[] arrayTryPlayer2 = Arrays.copyOf(player2.getNumbers(), player2.getTryNumber());
         System.out.println(Arrays.toString(arrayTryPlayer2));
-
     }
 }
