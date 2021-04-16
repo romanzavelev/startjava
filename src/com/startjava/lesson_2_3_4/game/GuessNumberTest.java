@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class GuessNumberTest {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String answer;
         System.out.println("New game");
         System.out.println("У каждого игрока 10 попыток.");
         System.out.print("Введите имя первого игрока: ");
-        String name = scan.nextLine();
-        Player player1 = new Player(name);
+        Player player1 = new Player(scan.nextLine());
         System.out.print("Введите имя второго игрока: ");
-        name = scan.nextLine();
-        Player player2 = new Player(name);
+        Player player2 = new Player(scan.nextLine());
+        String answer;
+
         do {
             GuessNumber game = new GuessNumber(player1, player2);
             game.start();

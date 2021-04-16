@@ -19,19 +19,7 @@ public class GuessNumber {
         randomNumber = random.nextInt(101);
         Scanner scan = new Scanner(System.in);
         while (true) {
-            System.out.println(player1.getName());
-            System.out.println("Введите число: ");
-            player1.setNumber(scan.nextInt());
-            if (player1.getNumber() > randomNumber) {
-                System.out.println("Введенное вами число больше того, что загадал компьютер");
-            } else if (player1.getNumber() < randomNumber) {
-                System.out.println("Введенное вами число меньше того, что загадал компьютер");
-            } else {
-                System.out.println("Игрок " + player1.getName() + " угадал число " + player1.getNumber() +
-                        " с " + player1.getTryNumber() + " попытки");
-                endGame();
-                break;
-            }
+            EnterNumbers(player1);
 
             System.out.println(player2.getName());
             System.out.println("Введите число: ");
@@ -59,12 +47,28 @@ public class GuessNumber {
         }
     }
 
+    private boolean EnterNumbers(Player player) {
+        System.out.println(player.getName());
+        System.out.println("Введите число: ");
+        player.setNumber(scan.nextInt());
+        if (player.getNumber() > randomNumber) {
+            System.out.println("Введенное вами число больше того, что загадал компьютер");
+        } else if (player.getNumber() < randomNumber) {
+            System.out.println("Введенное вами число меньше того, что загадал компьютер");
+        } else {
+            System.out.println("Игрок " + player.getName() + " угадал число " + player.getNumber() +
+                    " с " + player.getTryNumber() + " попытки");
+            return true;
+        }
+        return false;
+    }
+
     private void endGame() {
         int[] arrayTryPlayer1 = Arrays.copyOf(player1.getNumbers(), player1.getTryNumber());
         System.out.println(Arrays.toString(arrayTryPlayer1));
         int[] arrayTryPlayer2 = Arrays.copyOf(player2.getNumbers(), player2.getTryNumber());
         System.out.println(Arrays.toString(arrayTryPlayer2));
-        player1.resetValues();
-        player2.resetValues();
+        player1.clear();
+        player2.clear();
     }
 }
