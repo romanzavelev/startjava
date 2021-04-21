@@ -26,9 +26,6 @@ public class Player {
         return tryNumber;
     }
 
-    public void setTryNumber(int tryNumber) {
-        this.tryNumber = tryNumber;
-    }
 
     public int[] getNumbers() {
         return Arrays.copyOf(numbers, numbers.length);
