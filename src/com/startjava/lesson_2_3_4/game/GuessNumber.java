@@ -18,33 +18,38 @@ public class GuessNumber {
         Random random = new Random();
         randomNumber = random.nextInt(101);
         while (true) {
-            if (EnterNumbers(player1)) {
-                finishGame();
+            enterNumbers(player1);
+            if (checkNumbers(player1)) {
+                displayEndGameInformation() ;
                 break;
             }
 
-            if (EnterNumbers(player2)) {
-                finishGame();
+            enterNumbers(player2);
+            if (checkNumbers(player2)) {
+                displayEndGameInformation();
                 break;
             }
         }
     }
 
-    private int GetActualNumber(Player player) {
+    private int getActualNumber(Player player) {
         return player.getNumbers()[player.getTryNumber() - 1];
     }
 
-    private boolean EnterNumbers(Player player) {
+    private void enterNumbers(Player player) {
         System.out.println(player.getName());
         System.out.println("Введите число: ");
         Scanner scan = new Scanner(System.in);
         player.setNumber(scan.nextInt());
-        if (GetActualNumber(player) > randomNumber) {
+    }
+
+    private boolean checkNumbers(Player player) {
+        if (getActualNumber(player) > randomNumber) {
             System.out.println("Введенное вами число больше того, что загадал компьютер");
-        } else if (GetActualNumber(player) < randomNumber) {
+        } else if (getActualNumber(player) < randomNumber) {
             System.out.println("Введенное вами число меньше того, что загадал компьютер");
         } else {
-            System.out.println("Игрок " + player.getName() + " угадал число " + GetActualNumber(player) +
+            System.out.println("Игрок " + player.getName() + " угадал число " + getActualNumber(player) +
                     " с " + player.getTryNumber() + " попытки");
             return true;
         }
@@ -56,7 +61,7 @@ public class GuessNumber {
         return false;
     }
 
-    private void finishGame() {
+    private void displayEndGameInformation() {
         int[] arrayTryPlayer1 = Arrays.copyOf(player1.getNumbers(), player1.getTryNumber());
         System.out.println("Попытки игрока " + player1.getName());
         outputArray(arrayTryPlayer1);

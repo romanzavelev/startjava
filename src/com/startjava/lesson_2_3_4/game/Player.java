@@ -18,17 +18,16 @@ public class Player {
     }
 
     public void setNumber(int number) {
+        numbers[tryNumber] = number;
         tryNumber++;
-        numbers[tryNumber - 1] = number;
     }
 
     public int getTryNumber() {
         return tryNumber;
     }
 
-
     public int[] getNumbers() {
-        return Arrays.copyOf(numbers, numbers.length);
+        return Arrays.copyOf(numbers, tryNumber);
     }
 
     public void clear() {
