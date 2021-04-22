@@ -1,6 +1,5 @@
 package com.startjava.lesson_2_3_4.game;
 
-import java.sql.Array;
 import java.util.Arrays;
 
 public class Player {
