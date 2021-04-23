@@ -25,6 +25,10 @@ public class Player {
         return tryNumber;
     }
 
+    public int getLastNumber() {
+        return numbers[tryNumber-1];
+    }
+
     public int[] getNumbers() {
         return Arrays.copyOf(numbers, tryNumber);
     }

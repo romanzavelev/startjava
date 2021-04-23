@@ -7,7 +7,6 @@ public class GuessNumber {
     private Player player1;
     private Player player2;
     private int randomNumber;
-    private int ActualNumber;
 
     public GuessNumber(Player player1, Player player2) {
         this.player1 = player1;
@@ -37,20 +36,21 @@ public class GuessNumber {
     private void enterNumber(Player player) {
         System.out.println(player.getName() + " введите число: ");
         Scanner scan = new Scanner(System.in);
-        ActualNumber = scan.nextInt();
-        player.setNumber(ActualNumber);
+        player.setNumber(scan.nextInt());
     }
 
     private boolean checkNumbers(Player player) {
-        if (ActualNumber > randomNumber) {
-            System.out.println("Введенное вами число больше того, что загадал компьютер");
-        } else if (ActualNumber < randomNumber) {
-            System.out.println("Введенное вами число меньше того, что загадал компьютер");
-        } else {
-            System.out.println("Игрок " + player.getName() + " угадал число " + ActualNumber +
+        if (player.getLastNumber() == randomNumber) {
+            System.out.println("Игрок " + player.getName() + " угадал число " + player.getLastNumber() +
                     " с " + player.getTryNumber() + " попытки");
             return true;
         }
+
+        String messageText =
+                player.getLastNumber() > randomNumber ?
+                        "Введенное вами число больше того, что загадал компьютер"
+                        : "Введенное вами число меньше того, что загадал компьютер";
+        System.out.println(messageText);
 
         if (player.getTryNumber() == 10) {
             System.out.println("У игрока " + player.getName() + " закончились попытки");
@@ -61,8 +61,8 @@ public class GuessNumber {
 
     private void outputEnteredNumbers(Player player) {
         System.out.println("Попытки игрока " + player.getName());
-        for (int actualValue:player.getNumbers()) {
-            System.out.print(actualValue + " ");
+        for (int number:player.getNumbers()) {
+            System.out.print(number + " ");
         }
         System.out.println();
     }
