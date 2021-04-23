@@ -7,3 +7,5 @@ SELECT * FROM Jaegers WHERE kaijuKill = (SELECT MAX(kaijuKill) FROM Jaegers);
 SELECT avg(weight) FROM Jaegers;
 UPDATE Jaegers SET kaijuKill = kaijuKill+1 WHERE STATUS = 'intact';
 DELETE FROM Jaegers WHERE STATUS = 'Destroyed';
+
+-- \i C:/Users/Пользователь/Documents/startjava/src/com/startjava/lesson_5/queries.sql
