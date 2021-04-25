@@ -46,11 +46,8 @@ public class GuessNumber {
             return true;
         }
 
-        String messageText =
-                player.getLastNumber() > randomNumber ?
-                        "Введенное вами число больше того, что загадал компьютер"
-                        : "Введенное вами число меньше того, что загадал компьютер";
-        System.out.println(messageText);
+        String lessOrMoree = player.getLastNumber() > randomNumber ? "больше" : "меньше";
+        System.out.println("Введенное вами число " + lessOrMoree + " того, что загадал компьютер");
 
         if (player.getTryNumber() == 10) {
             System.out.println("У игрока " + player.getName() + " закончились попытки");
@@ -61,7 +58,7 @@ public class GuessNumber {
 
     private void outputEnteredNumbers(Player player) {
         System.out.println("Попытки игрока " + player.getName());
-        for (int number:player.getNumbers()) {
+        for (int number : player.getNumbers()) {
             System.out.print(number + " ");
         }
         System.out.println();
