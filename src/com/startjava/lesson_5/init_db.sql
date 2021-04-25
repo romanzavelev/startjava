@@ -9,7 +9,6 @@ VALUES
     ('Mudo Fare',      'Mark-4', '170', '3412', 'intact',    'Japan',     '24.06.2016', '9'),
     ('Danco Manko',    'Mark-3', '650', '2312', 'Destroyed', 'Russia',    '14.05.2015', '2'),
     ('China Tana',     'Mark-2', '230', '1012', 'intact',    'Australia', '24.09.2019', '10'),
-    ('Guchi Muchi',    'Mark-5', '280', '2112', 'Destroyed', 'Japan',     '30.12.2018', '4'
-    );
+    ('Guchi Muchi',    'Mark-5', '280', '2112', 'Destroyed', 'Japan',     '30.12.2018', '4');
 
 -- \i C:/Users/Пользователь/Documents/startjava/src/com/startjava/lesson_5/init_db.sql
